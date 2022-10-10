@@ -11,5 +11,7 @@
             "email": "simoncestmoi@hotmail.fr"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/psr7": "^2.4"
+    }
 }
