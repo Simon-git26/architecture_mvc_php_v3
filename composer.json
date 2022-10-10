@@ -2,7 +2,7 @@
     "name": "simon/framwork",
     "autoload": {
         "psr-4": {
-            "Simon\\Framwork\\": "src/"
+            "Framework\\": "src/Framework"
         }
     },
     "authors": [
