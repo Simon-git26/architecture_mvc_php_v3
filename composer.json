@@ -1,0 +1,15 @@
+{
+    "name": "simon/framwork",
+    "autoload": {
+        "psr-4": {
+            "Simon\\Framwork\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Simon Balleux",
+            "email": "simoncestmoi@hotmail.fr"
+        }
+    ],
+    "require": {}
+}
