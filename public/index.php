@@ -13,3 +13,7 @@ $app = new \Framework\App();
 
 // stocker ma réponse et generer la requete avec Guzzle
 $response = $app->run(\GuzzleHttp\Psr7\ServerRequest::fromGlobals());
+
+// il faut que php affiche les bon contenu et renvoi les bon header
+// Convertir une reponse ps7 vers un outpout http avec http-interop
+\Http\Response\send($response);

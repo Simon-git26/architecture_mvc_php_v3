@@ -26,9 +26,12 @@ class App {
             return $response;
         }
 
+        if ($uri === '/blog') {
+            return new Response(200, [], '<h1>Bienvenu sur le blog</h1>');
+        }
+
         // sinon
-        $response = new Response();
-        $response->getBody()->write('Bonjour');
-        return $response;
+        // renvoyer un status, pas de header et mon body
+        return $response = new Response(404, [], '<h1>Erreur 404</h1>');
     }
 }
