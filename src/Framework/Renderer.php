@@ -25,7 +25,7 @@ class Renderer {
     }
 
 
-    public function render($view): string {
+    public function render($view, $params = []): string {
         // est ce que jai un namespace dans le chemin de la vue
         if ($this->hasNamespace($view)) {
             // Il me faut le chemin
@@ -38,6 +38,10 @@ class Renderer {
         
         // Pour temporiser la sortie donc mettre en memoire les infos qui vont etre en sortie
         ob_start();
+        // Injecter le renderer dans mes vue
+        $renderer = $this;
+        // sortir les variables qui sont dans le tableau en param
+        extract($params);
         // require mon chemin
         require($path);
         // recuperer le contenu 

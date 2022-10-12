@@ -18,11 +18,6 @@ class App {
      * @param string[] $modules Liste des modules à chargé
      */
 
-     // je recupere un tableau qui recupere les modules à chargés
-    public function __construct(array $modules) {
-        
-    }
-
     // Requete en param et response en sortie de la fonction
     public function run(ServerRequestInterface $request): ResponseInterface {
         // recuperer mon url, sur ma requete jai ma methode getUri et dans cette methode je n'est besoin que du chemin

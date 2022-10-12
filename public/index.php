@@ -8,12 +8,20 @@
 // Charger mon autloader
 require '../vendor/autoload.php';
 
+// Initalider le Renderer
+/*$renderer = new \Framework\Renderer();
+$renderer->addPath(dirname(__DIR__) .'/views');*/
+
 // Lorsque j'initialise l'appli, utilisé un system de module
 // Classe qui represente mon application, initialisation de App
-$app = new \Framework\App([
+
+
+/* $app = new \Framework\App([
     // passé le nampespace qui va correspondre a bloc module
     BlogModule::class
-]);
+]);*/ 
+
+$app = new \Framework\App();
 
 
 
