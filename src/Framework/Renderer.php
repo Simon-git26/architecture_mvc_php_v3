@@ -5,10 +5,18 @@ namespace Framework;
 class Renderer {
 
     // création de ma constante pour le namespace par default
-    const DEFAULT_NAMESPACE = '__MAIN_DEFAULT';
+    const DEFAULT_NAMESPACE = '__MAIN';
 
     // Tableaux qui va contenir mes chemins
     private $paths = [];
+
+    private $globals = [];
+
+    public function __construct($defaultPath = null) {
+        if (!is_null($defaultPath)) {
+            $this->addPath($defaultPath);
+        }
+    }
 
 
     // La fonction ajoute des chemins qui seront plus tard utilisé par le renderer
@@ -46,6 +54,10 @@ class Renderer {
         require($path);
         // recuperer le contenu 
         return ob_get_clean();
+    }
+
+    public function addGlobal($key, $value): void {
+        $this->globals[$key] = $value;
     }
 
 
